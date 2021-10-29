@@ -2,3 +2,19 @@ ext {
     lombokVersion = "1.18.20"
     springFoxVersion = "3.0.0"
 }
+
+ext {
+    deps = [
+            springBootWeb: [
+                    "org.springframework.boot:spring-boot-starter-web",
+                    "io.springfox:springfox-boot-starter:${springFoxVersion}",
+                    "io.springfox:springfox-swagger-ui:${springFoxVersion}"
+            ],
+            springTest: [
+                    "org.springframework.boot:spring-boot-starter-test"
+            ],
+            lombok: [
+                    "org.projectlombok:lombok:${lombokVersion}"
+            ]
+    ]
+}

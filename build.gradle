@@ -17,14 +17,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation "io.springfox:springfox-boot-starter:${springFoxVersion}"
-    implementation "io.springfox:springfox-swagger-ui:${springFoxVersion}"
+    implementation deps.springBootWeb
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation deps.springTest
 
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly deps.lombok
+    annotationProcessor deps.lombok
 }
 
 group = 'com.countryapi'
