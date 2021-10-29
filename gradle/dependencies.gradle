@@ -1,0 +1,4 @@
+ext {
+    lombokVersion = "1.18.20"
+    springFoxVersion = "3.0.0"
+}
