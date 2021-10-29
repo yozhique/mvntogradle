@@ -9,26 +9,12 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
-apply from: "${rootDir}/gradle/dependencies.gradle"
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
+apply from: "${rootDir}/gradle/java.gradle"
 
 dependencies {
-    implementation deps.springBootWeb
-
-    testImplementation deps.springTest
-
-    compileOnly deps.lombok
-    annotationProcessor deps.lombok
+    // todo custom to this module dependencies
 }
-
-group = 'com.countryapi'
-version = '0.0.1-SNAPSHOT'
-description = 'countryapi'
-java.sourceCompatibility = JavaVersion.VERSION_11
 
 springBoot {
     mainClass = 'com.countryapi.countryapi.CountryApiApp'
@@ -40,12 +26,4 @@ publishing {
             from(components.java)
         }
     }
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
 }
