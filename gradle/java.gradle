@@ -1,0 +1,29 @@
+apply from: "${rootDir}/gradle/dependencies.gradle"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation deps.springBootWeb
+
+    testImplementation deps.springTest
+
+    compileOnly deps.lombok
+    annotationProcessor deps.lombok
+}
+
+group = 'com.countryapi'
+version = '0.0.1-SNAPSHOT'
+description = 'countryapi'
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

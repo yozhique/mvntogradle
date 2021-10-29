@@ -1,0 +1,24 @@
+ext {
+    lombokVersion = "1.18.20"
+    springFoxVersion = "3.0.0"
+    guavaVersion = "31.0.1-jre"
+}
+
+ext {
+    deps = [
+            guava        : [
+                    "com.google.guava:guava:${guavaVersion}"
+            ],
+            lombok       : [
+                    "org.projectlombok:lombok:${lombokVersion}"
+            ],
+            springBootWeb: [
+                    "org.springframework.boot:spring-boot-starter-web",
+                    "io.springfox:springfox-boot-starter:${springFoxVersion}",
+                    "io.springfox:springfox-swagger-ui:${springFoxVersion}"
+            ],
+            springTest   : [
+                    "org.springframework.boot:spring-boot-starter-test"
+            ]
+    ]
+}
