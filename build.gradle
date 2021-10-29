@@ -13,7 +13,7 @@ plugins {
 apply from: "${rootDir}/gradle/java.gradle"
 
 dependencies {
-    // todo custom to this module dependencies
+    implementation deps.guava
 }
 
 springBoot {
