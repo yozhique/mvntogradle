@@ -25,13 +25,6 @@ public class CountryControllerIntTest {
     private MockMvc mvc;
 
     @Test
-    void getCountriesTest() throws Exception {
-        mvc.perform(get("/countries")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-    }
-
-    @Test
     void getCountriesTop10ByPopulation() throws Exception {
         mvc.perform(get("/countries/populationTopTen")
                 .contentType(MediaType.APPLICATION_JSON))

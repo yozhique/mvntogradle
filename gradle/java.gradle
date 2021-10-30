@@ -22,6 +22,9 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
 
 tasks.withType(JavaCompile) {

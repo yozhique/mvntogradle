@@ -18,11 +18,6 @@ public class CountryController {
         this.countryService = countryService;
     }
 
-    @GetMapping
-    public List<Country> getCountries() {
-        return countryService.getCountries();
-    }
-
     @GetMapping("/populationTopTen")
     public List<Country> getCountriesTop10ByPopulation() {
         return countryService.getCountriesTopTenByPopulation();

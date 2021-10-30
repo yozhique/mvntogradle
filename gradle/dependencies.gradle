@@ -1,5 +1,4 @@
 ext {
-    lombokVersion = "1.18.20"
     springFoxVersion = "3.0.0"
     guavaVersion = "31.0.1-jre"
 }
@@ -10,7 +9,7 @@ ext {
                     "com.google.guava:guava:${guavaVersion}"
             ],
             lombok       : [
-                    "org.projectlombok:lombok:${lombokVersion}"
+                    "org.projectlombok:lombok"
             ],
             springBootWeb: [
                     "org.springframework.boot:spring-boot-starter-web",
