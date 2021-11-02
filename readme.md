@@ -1,3 +1,4 @@
+<pre>
 Steps I did to migrate to gradle:
 
 1. Install gradle - make it runnable from command line
@@ -30,3 +31,5 @@ Steps I did to migrate to gradle:
     }
     
 12. Apply some experienced gradler wisdom to better organise dependency management
+
+</pre>
